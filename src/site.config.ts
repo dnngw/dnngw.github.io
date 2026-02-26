@@ -25,8 +25,7 @@ export const siteConfig: SiteConfig = {
 		- The link value found in src/components/layout/Header.astro L:35
 		- In the footer found in src/components/layout/Footer.astro L:12
 	*/
-	title: "Astro Cactus",
-	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
+	title: "Danang Wijayanto",
 	url: "https://dnngw.github.io",
 };
 
@@ -40,17 +39,22 @@ export const menuLinks: { path: string; title: string }[] = [
 		path: "/about/",
 		title: "About",
 	},
+  {
+		path: "/experiences/",
+		title: "Experiences",
+	},  
 	{
 		path: "/posts/",
 		title: "Blog",
 	},
-	{
-		path: "/notes/",
-		title: "Notes",
-	},
+  {
+    path: "/projects",
+    title: "Projects"
+  }
+
 ];
 
-// https://expressive-code.com/reference/configuration/
+
 export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 	styleOverrides: {
 		borderRadius: "4px",
