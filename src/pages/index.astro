@@ -16,7 +16,7 @@ const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
 
 <PageLayout meta={{ title: "Home" }}>
 	<section>
-		<h1 class="title mb-12">Welcome / ようこそ / Selamat datang</h1>
+		<h1 class="title mb-12">Hello, (ฅ^•ﻌ•^ฅ)</h1>
 		<p class="mb-4">
 			"I'm Danang Wijayanto, a software engineer passionate about building things that make a real impact. 
       I'm currently deepening my understanding across frontend, backend, and infrastructure,
@@ -30,16 +30,18 @@ const latestPosts = allPostsByDate.slice(0, MAX_POSTS);
 	</section>
 	
 	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Latest Posts</a></h2>
-		<ul class="space-y-4" role="list">
-			{
-				latestPosts.map((p) => (
-					<li class="grid gap-1 sm:grid-cols-[auto_1fr]">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
-		</ul>
+		{latestPosts.length <= 0 ? null :
+      <h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Latest Posts</a></h2>
+      <ul class="space-y-4" role="list">
+        {
+          latestPosts.map((p) => (
+            <li class="grid gap-1 sm:grid-cols-[auto_1fr]">
+              <PostPreview post={p} />
+            </li>
+          ))
+        }
+      </ul>
+    }
 	</section>
 
 </PageLayout>
